@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script tổng hợp</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        /* Đoạn nền đen phía trên */
+        .top-space {
+            height: 80px;
+            background-color: #000;
+        }
+
+        /* Đoạn nền đen phía dưới */
+        .bottom-space {
+            height: 80px;
+            background-color: #000;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .box {
+            background-color: #111;
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .box-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: white;
+            resize: none;
+            font-size: 14px;
+            outline: none;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #222;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-space"></div>
+
+    <h1>Script tổng hợp</h1>
+    <h2>by VanKieu</h2>
+
+    <div class="container">
+
+        <div class="box">
+            <div class="box-title">Redz Hub</div>
+            <textarea rows="3" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/huy384/redzHub/refs/heads/main/redzHub.lua"))()</textarea>
+            <button onclick="copyText(this)">Sao chép</button>
+        </div>
+
+        <div class="box">
+            <div class="box-title">Gravity</div>
+            <textarea rows="3" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()</textarea>
+            <button onclick="copyText(this)">Sao chép</button>
+        </div>
+
+        <div class="box">
+            <div class="box-title">Trẩu</div>
+            <textarea rows="3" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/trungdao2k4/buffalo/refs/heads/main/trauhubv10"))()</textarea>
+            <button onclick="copyText(this)">Sao chép</button>
+        </div>
+
+        <div class="box">
+            <div class="box-title">Rubu hub</div>
+            <textarea rows="3" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Bubu2k/Rubutv/refs/heads/main/rubuhubV5Y.lua"))()</textarea>
+            <button onclick="copyText(this)">Sao chép</button>
+        </div>
+
+        <div class="box">
+            <div class="box-title">TiroDel</div>
+            <textarea rows="3" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/NTTLOL/Tiro-Hub/refs/heads/main/TiroDel.lua.txt"))()</textarea>
+            <button onclick="copyText(this)">Sao chép</button>
+        </div>
+
+    </div>
+
+    <div class="bottom-space"></div>
+
+    <script>
+        function copyText(button) {
+            var textarea = button.previousElementSibling;
+            textarea.select();
+            textarea.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            button.innerText = "Đã sao chép!";
+            setTimeout(() => {
+                button.innerText = "Sao chép";
+            }, 1500);
+        }
+    </script>
+
+</body>
+</html>
